@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render expenseList with expenses 1`] = `
+<div>
+  <ul>
+    <li
+      key="1"
+    >
+      <ExpenseListItem
+        amount={134}
+        desc="gum"
+        id="1"
+        note=""
+        timestamp={"1970-01-01T00:00:00.000Z"}
+      />
+    </li>
+    <li
+      key="2"
+    >
+      <ExpenseListItem
+        amount={109500}
+        desc="rent"
+        id="2"
+        note=""
+        timestamp={"1969-12-28T00:00:00.000Z"}
+      />
+    </li>
+    <li
+      key="3"
+    >
+      <ExpenseListItem
+        amount={4500}
+        desc="Credit Card"
+        id="3"
+        note=""
+        timestamp={"1970-01-05T00:00:00.000Z"}
+      />
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Should render no expenses with empty expenses props 1`] = `
+<div>
+  <p>
+    No Expenses
+  </p>
+</div>
+`;
+
+exports[`Should render no expenses without expenses props 1`] = `
+<div>
+  <p>
+    No Expenses
+  </p>
+</div>
+`;
