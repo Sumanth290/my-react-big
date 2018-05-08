@@ -19,6 +19,8 @@ const getAdminInfoComponent = (WrappedComponent)=>{
     );
 };
 
+// Just testing some stuff
+
 const requireAuthentication = (WrappedComponent)=>{
     return (props) => (
         (props.isAuthenticated ?(
