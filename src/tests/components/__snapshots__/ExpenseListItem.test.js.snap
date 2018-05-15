@@ -12,9 +12,8 @@ exports[`Should render expense list item 1`] = `
     </Link>
   </h3>
   <p>
-    Amount : 
-    109500
-     ¢
+    Amount : ₹ 
+    1,095
   </p>
   <p>
     Date : 
