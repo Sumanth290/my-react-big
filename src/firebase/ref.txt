@@ -1,0 +1,114 @@
+// database.ref("expenses").once("value")
+  // .then((snapshot) => {
+  //   const expenses = [];
+  //   snapshot.forEach((child) => {
+  //     expenses.push({
+  //       id1 : child.key,
+  //       ...child.val()
+  //     });
+  //   });
+  //   console.log("expenses :",expenses);
+  // }).catch((err) => {
+  //   console.log("Error:",err);
+  // });
+
+  // database.ref("notes").push({
+  //   title : "To Do 2",
+  //   body : "Go for a run 2"
+  // });
+
+  // database.ref("expenses").push({
+  //   id : "1",
+  //   desc : "gum",
+  //   note: "Note 1",
+  //   amount: 134
+  // });
+  // database.ref("expenses").push({
+  //   id : "2", 
+  //   desc : "rent",
+  //   note: "Note 2",
+  //   amount: 109500
+  // });
+  // database.ref("expenses").push({
+  //   id : "3",
+  //   desc : "Credit Card",
+  //   note: "",
+  //   amount: 4500
+  // });
+
+  // const onValueChange = database.ref().on("value",(snapshot) => {
+  //   const val = snapshot.val();
+  //   console.log(`${val.name} is a ${val.job.role} at ${val.job.company}`);
+  // },(error) => {
+  //     console.log("Error occurred : ",error);
+  // });
+
+  // database.ref().off("value",onValueChange);
+
+//   const onValueChange = database.ref().on("value",(snapshot) => {
+//     console.log("Updated snapshot :",snapshot.val());
+//   },(e) => {
+//       console.log("errrrrror :",error);
+//   });
+
+//   setTimeout(() => {
+//     database.ref("age").set(31);
+//   },4000);
+
+//   setTimeout(() => {
+//     database.ref().off("value",onValueChange);
+//   },8000);
+
+//   setTimeout(() => {
+//     database.ref("age").set(32);
+//   },12000);
+
+//   database.ref().set({
+//       name : "Sumanth Damarla",
+//       age : 28,
+//       stressLevel : 7,
+//       job: {
+//         role : "Web developer",
+//         company : "Google"
+//       },
+//       isSingle : true,
+//       location : {
+//           city : "Vijayawada",
+//           state : "Andhra Pradesh",
+//           country : "India"
+//       }
+//   }).then(() => {
+//     console.log("Data is saved");
+//   }).catch((error) => {
+//     console.log("Failed:",error)
+//   });
+
+//   database.ref().update({
+//       stressLevel : 9,
+//       "job/company" : "Amazon",
+//       "location/city" : "Pune"
+//   }).then(() => {
+//         console.log("Data is updated");
+//     }).catch((error) => {
+//         console.log("Failed:",error)
+//     });
+
+//     database.ref().once("value").then((snapshot) => {
+//         console.log("snapshot:",snapshot.val());
+//     }).catch((error) => {
+//         console.log("error:",error);
+//     });
+
+//   database.ref("isSingle").set(null).then(() => {
+//   console.log("Data isSingle is removed");
+// }).catch((error) => {
+//   console.log("Failed:",error)
+// });
+
+//   database.ref().remove().then(() =>{
+//       console.log("Removed base node !!");
+//   }).catch((err) => {
+//     console.log("Error occurred:",err);
+//   });
+
+  // console.log("Requested database");
