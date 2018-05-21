@@ -1,6 +1,6 @@
 import {
     startAddExpense,addExpense,removeExpense,editExpense,setExpenses,startSetExpenses, 
-    startRemoveExpense
+    startRemoveExpense,startEditExpense
 } from "../../actions/expenses";
 import moment from "moment";
 import expenses from "../fixtures/expenses";
@@ -45,6 +45,31 @@ test("Should test editExpense action",() => {
         type: "EDIT_EXPENSE",
         id : "abc111",
         updates : {desc:"wrsgfedfg",note: "New Note value"}
+    });
+});
+
+test("Should edit expense and update to database and store",(done) => {
+    const store = createMockStore({});
+    store.dispatch(startEditExpense(2,{
+        note : "Added note :)",
+        desc : "Rental"
+    })).then(() => {
+        expect(store.getActions()[0]).toEqual({
+            type : "EDIT_EXPENSE",
+            id : 2,
+            updates : {
+                note : "Added note :)",
+                desc : "Rental"
+            }
+        });
+        return database.ref("expenses/2").once("value").then((snapshot) =>{
+            expect(snapshot.val()).toEqual({
+                ...expensesData[2],
+                note : "Added note :)",
+                desc : "Rental"
+            });
+            done();
+        });
     });
 });
 
