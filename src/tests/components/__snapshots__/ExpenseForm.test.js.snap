@@ -5,7 +5,7 @@ exports[`Should render ExpenseForm 1`] = `
   <input
     autoFocus={true}
     onChange={[Function]}
-    placeholder="desc"
+    placeholder="Description"
     type="text"
     value=""
   />
@@ -120,7 +120,7 @@ exports[`Should render ExpenseForm with expense 1`] = `
   <input
     autoFocus={true}
     onChange={[Function]}
-    placeholder="desc"
+    placeholder="Description"
     type="text"
     value="rent"
   />
@@ -235,7 +235,7 @@ exports[`Should render error for ExpenseForm 1`] = `
   <input
     autoFocus={true}
     onChange={[Function]}
-    placeholder="desc"
+    placeholder="Description"
     type="text"
     value=""
   />

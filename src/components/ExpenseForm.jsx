@@ -65,7 +65,7 @@ export default class ExpenseForm extends React.Component {
             <div>
                 <input 
                     type="text" 
-                    placeholder="desc" 
+                    placeholder="Description" 
                     autoFocus 
                     value={this.state.desc}
                     onChange={this.handleDescOnChange}

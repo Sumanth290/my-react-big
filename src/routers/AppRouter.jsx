@@ -6,6 +6,7 @@ import EditExpensePage from "../components/EditExpensePage.jsx";
 import HelpPage from "../components/HelpPage.jsx";
 import ErrorPage from "../components/ErrorPage.jsx";
 import Header from "../components/Header.jsx";
+import LoginPage from "../components/LoginPage.jsx";
 
 
 const AppRouter = () => (
@@ -13,7 +14,8 @@ const AppRouter = () => (
         <div>
             <Header />
             <Switch>
-                <Route path="/" component={ExpenseDashboardPage} exact={true}/>
+                <Route path="/" component={LoginPage} exact={true}/>
+                <Route path="/dashboard" component={ExpenseDashboardPage}/>
                 <Route path="/create" component={AddExpensePage}/>
                 <Route path="/edit/:id" component={EditExpensePage}/>
                 <Route path="/help" component={HelpPage}/> 
