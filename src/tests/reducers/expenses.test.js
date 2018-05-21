@@ -57,7 +57,7 @@ test("Should edit expense of state",()=>{
     });
 });
 
-test("Should edit expense of state",()=>{
+test("Should edit expense of state if id doesn't match",()=>{
     expect(expensesReducer(prevState,{
         type:"EDIT_EXPENSE",
         id: "8",
@@ -67,4 +67,12 @@ test("Should edit expense of state",()=>{
             timestamp : moment(0).subtract(7,"days")
         }
     })).toEqual(prevState);
+});
+
+test("Should set expenses",() => {
+    const expenses = [prevState[0],prevState[2]];
+    expect(expensesReducer(prevState,{
+        type: "SET_EXPENSES",
+        expenses
+    })).toEqual(expenses);
 });
