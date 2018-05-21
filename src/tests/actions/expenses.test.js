@@ -1,4 +1,7 @@
-    import {startAddExpense,addExpense,removeExpense,editExpense,setExpenses,startSetExpenses} from "../../actions/expenses";
+import {
+    startAddExpense,addExpense,removeExpense,editExpense,setExpenses,startSetExpenses, 
+    startRemoveExpense
+} from "../../actions/expenses";
 import moment from "moment";
 import expenses from "../fixtures/expenses";
 import configureStore from "redux-mock-store";
@@ -20,6 +23,20 @@ test("Should test removeExpense action",() => {
     expect(removeExpense("abc111")).toEqual({
         type : "REMOVE_EXPENSE",
         id: "abc111"
+    });
+});
+
+test("Should remove expense from database and store",(done) => {
+    const store = createMockStore({});
+    store.dispatch(startRemoveExpense(2)).then(() => {
+        expect(store.getActions()[0]).toEqual({
+            type : "REMOVE_EXPENSE",
+            id : 2
+        });
+        return database.ref("expenses/2").once("value").then((snapshot) =>{
+            expect(snapshot.val()).toEqual(null);
+            done();
+        });
     });
 });
 
