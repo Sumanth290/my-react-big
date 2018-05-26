@@ -25,13 +25,13 @@ test("should render EditExpensePage", () => {
 
 test("should handle onSubmit", () => {
     wrapper.find("ExpenseForm").prop("onSubmit")(expenses[1]);
-    expect(history.push).toHaveBeenLastCalledWith("/");
+    expect(history.push).toHaveBeenLastCalledWith("/dashboard");
     expect(editExpenseDispatcher).toHaveBeenLastCalledWith(expenses[1].id,expenses[1]);
 });
 
 test("should handle onClick on remove button", () => {
     global.confirm = jest.fn(() => true);
     wrapper.find("button").simulate("click",{});
-    expect(history.push).toHaveBeenLastCalledWith("/");
+    expect(history.push).toHaveBeenLastCalledWith("/dashboard");
     expect(removeExpenseDispatcher).toHaveBeenLastCalledWith(expenses[1].id);
 });

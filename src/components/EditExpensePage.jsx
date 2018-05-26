@@ -6,14 +6,14 @@ import {startEditExpense,startRemoveExpense} from "../actions/expenses";
 export class EditExpensePage extends React.Component{
     handleOnSubmit = (expense) => {
         this.props.editExpenseDispatcher(this.props.expense.id,expense);
-        this.props.history.push("/");
+        this.props.history.push("/dashboard");
     };
 
     handleRemove = (e) => {
         if(confirm("Are you sure you want to remove expense ?")){
             this.props.removeExpenseDispatcher(this.props.expense.id);
             console.log("Removed !!");
-            this.props.history.push("/");
+            this.props.history.push("/dashboard");
         }
     };
 
