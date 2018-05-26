@@ -7,6 +7,7 @@ export const resetInitPath = () => {
 
 export const setInitPath = (path) => {
     initialPath = path;
+    console.log("initialPath",initialPath);
 };
 
 export const login = (uid) => ({ type : "LOGIN", uid });

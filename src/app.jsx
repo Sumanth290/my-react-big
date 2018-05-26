@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import configureStore from "./store/configureStore";
 import { startSetExpenses } from "./actions/expenses";
-import { login,logout,initialPath,resetInitPath,setInitPath } from "./actions/auth";
+import { login,logout,initialPath } from "./actions/auth";
 import getVisibleExpenses from "./selectors/expenses";
 import AppRouter,{history} from "./routers/AppRouter.jsx";
 import {firebase} from "./firebase/firebase";
@@ -11,8 +11,10 @@ import "normalize.css/normalize.css";
 import "./styles/myCSS.scss";
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
+import {setInitPath} from "./actions/auth";
 
 const store = configureStore();
+setInitPath(history.location.pathname);
 
 const main = (
     <Provider store={store}>
@@ -22,7 +24,6 @@ const main = (
 
 ReactDOM.render(<p>Loading...</p>,document.getElementById("app"));
 
-setInitPath(history.location.pathname);
 
 let isRendered = false;
 
