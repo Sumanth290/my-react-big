@@ -11,7 +11,10 @@ export const LoginPage = (props) => (
                 <p className="box-layout__text">It's time to get your expenses under control</p>
             </div>
             <div className="box-layout__box">
-                <button className="box-layout__button" onClick={props.startLogin}>Login with Google</button>
+                <button className="box-layout__button" onClick={props.startLogin}>
+                    Login with 
+                    <img className="box-layout__buttonimg" src="/media/Google.png" alt="Google" />
+                </button>
             </div>
         </div>
     </div>

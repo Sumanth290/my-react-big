@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import {Link} from "react-router-dom";
 import getVisibleExpenses from "../selectors/expenses";
 import getExpensesTotals from "../selectors/expenses-total";
 import myFormat from "../util/amtFormatter";
@@ -10,9 +11,15 @@ export class ExpenseSummary extends React.Component {
             <div>
                 {this.props.count > 0 && (
                     this.props.count === 1 ? (
-                        <p>{`Viewing 1 expense totalling ₹ ${myFormat(this.props.total)}`}</p>
+                        <div>
+                            <p>{`Viewing 1 expense totalling ₹ ${myFormat(this.props.total)}`}</p>
+                            <Link to="/create" >Create Expense</Link>
+                        </div>
                     ) : (
-                        <p>{`Viewing ${this.props.count} expenses totalling ₹ ${myFormat(this.props.total)}`}</p>
+                        <div>
+                            <p>{`Viewing ${this.props.count} expenses totalling ₹ ${myFormat(this.props.total)}`}</p>
+                            <Link to="/create" >Create Expense</Link>
+                        </div>
                     )
                 )}
             </div>
