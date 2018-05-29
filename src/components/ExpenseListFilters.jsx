@@ -40,29 +40,39 @@ export class ExpenseListFilters extends React.Component{
                 <div className="input-group">
                     <div className="input-group__item">
                         <input 
-                            type="text" 
+                            className="text-input"
+                            type="text"
                             value={this.props.filters.text} 
                             onChange={this.handleTextChange}
+                            placeholder="Search expenses"
                         />
                     </div>
                     <div className="input-group__item">
-                        <div>
-                            <input 
-                                type="radio" 
-                                name="sortFilter" 
-                                onChange={this.handleSortFilterChange} 
-                                value="date" 
-                                checked={this.props.filters.sortBy === "date"}
-                            />Date
-                        </div>
-                        <div>
-                            <input 
-                                type="radio" 
-                                name="sortFilter" 
-                                onChange={this.handleSortFilterChange} 
-                                value="amount" 
-                                checked={this.props.filters.sortBy === "amount"}
-                            />Amount
+                        <div className="radio-group">
+                            <div>
+                                <input 
+                                    className="radio"
+                                    type="radio" 
+                                    name="sortFilter" 
+                                    onChange={this.handleSortFilterChange} 
+                                    value="date" 
+                                    id="date"
+                                    checked={this.props.filters.sortBy === "date"}
+                                />
+                                <label className="labels" htmlFor="date">Date</label>
+                            </div>
+                            <div>
+                                <input 
+                                    className="radio"
+                                    type="radio" 
+                                    name="sortFilter" 
+                                    onChange={this.handleSortFilterChange} 
+                                    value="amount" 
+                                    id="amount"
+                                    checked={this.props.filters.sortBy === "amount"}
+                                />
+                                <label className="labels" htmlFor="amount">Amount</label>
+                            </div>
                         </div>
                     </div>
                     <div className="input-group__item">

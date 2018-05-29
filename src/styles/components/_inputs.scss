@@ -1,0 +1,40 @@
+.text-input{
+    border: 1px solid #cacccd;
+    height: 50px;
+    font-size: $font-size-xmedium;
+    font-weight: 300;
+    padding: $s-size;
+
+    @media (max-width : $desktop-breakpoint) {
+        font-size: $font-size-xmedium;
+        width: 100%;
+    }
+}
+
+.radio-group{
+    @media (max-width : $desktop-breakpoint) {
+        display: flex;
+    }
+    
+}
+
+.radio{
+    cursor: pointer;
+    @media (max-width : $desktop-breakpoint) {
+        margin-right: $s-size * 0.5;
+    }
+}
+
+.labels{
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: 1px;
+    @media (max-width : $desktop-breakpoint) {
+        margin-right: $m-size;
+    }
+}
+
+.text-area{
+    @extend .text-input;
+    height: 10rem;
+}

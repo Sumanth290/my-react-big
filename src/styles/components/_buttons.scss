@@ -15,3 +15,10 @@
 .buttons--link{
     background: none;
 }
+
+.buttons--remove{
+    background: #888;
+    @media (max-width : $desktop-breakpoint) {
+        width: 100%;
+    }
+}
