@@ -19,69 +19,58 @@
 }
 
 .box-layout__fade{
-    position: relative;
     align-items: center;
-    display: flex;
     background : fade-out($color: #ff7300, $amount: 0.25);
-    justify-content: space-between;
-    margin: $l-size * 2 0;
-    width: 100%;
     box-shadow: 0px 0.5px white,0px -0.5px white ;
+    display: flex;
+    justify-content: space-between;
+    padding: $m-size $l-size;
+    position: relative;
+    width: 100%;
     -moz-box-shadow: 0px 0.5px white,0px -0.5px white;
     -webkit-box-shadow: 0px 0.5px white,0px -0.5px white;
 
     @media (max-width : $desktop-breakpoint) {
-        margin: $m-size 0;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: flex-start;
     }
 }
 
 .box-layout__title{
-    padding: 0 $m-size;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: $m-size $xl-size;
-
-    @media (max-width : $desktop-breakpoint) {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: $s-size auto;
+    p{
+        margin: 0;
+        padding: 0;
     }
-    // background-color:coral;
-}
 
-.box-layout__text{
-    color : white;
-    font-size: $font-size-large ;
-    padding : $m-size ;
-    margin : 0 ;
-    // background-color:lightgreen;
-    // font-weight: 700;
-    @media (max-width : $desktop-breakpoint) {
-        font-size: 1.4rem ;
-        // line-height: 2;
+    @media (min-width : $desktop-breakpoint) {
+        padding-bottom: $s-size;
     }
 }
+
 
 .box-layout__heading{
     color : white;
     font-size: $font-size-xxlarge;
-    padding : $m-size ;
-    margin : 0 ;
-    // background-color:lightblue;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 5px;
 }
 
+
+.box-layout__text{
+    color : white;
+
+    @media (min-width : $desktop-breakpoint) {
+        font-size: $font-size-xmedium ;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+    }
+}
+
+
 .box-layout__box{
-    padding: 0 $m-size;
-    // text-align: center;
-    margin: $m-size $xl-size $m-size $xl-size;
-    // background-color:lightgreen;
+    @media (max-width : $desktop-breakpoint) {
+        padding: $l-size 0 $m-size 0;
+    }
 }
 
 .box-layout__button{
@@ -91,9 +80,8 @@
     font-size: 1.8rem;
     font-weight: 700;
     border: none;
-    margin : 0 $m-size ;
+    margin-right : $s-size ;
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 

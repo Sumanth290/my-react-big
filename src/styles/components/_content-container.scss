@@ -1,5 +1,9 @@
 .content-container{
     margin: 0 auto;
-    padding: 0 $l-size;
-    max-width: 130rem;
+    padding: 0 $xl-size;
+    max-width: 100rem;
+
+    @media (max-width : $desktop-breakpoint) {
+        padding: 0 $m-size * 1.2;
+    }
 }

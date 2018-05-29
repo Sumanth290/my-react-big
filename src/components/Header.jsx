@@ -9,12 +9,10 @@ export const Header = ({startLogout}) => (
         <div className="content-container">
             <div className="header__content">
                 <Link className="header__link" to="/dashboard">
-                    <div className="header__item">
-                        <p>Expensify</p>
-                    </div>
+                    <p className="header__item">Expensify</p>
                 </Link>
                 
-                <button className="buttons buttons--link" onClick={startLogout}>Log out</button>
+                <button className="buttons buttons--link" onClick={startLogout}>Logout</button>
             </div>
         </div>
     </header>

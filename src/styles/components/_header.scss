@@ -1,10 +1,5 @@
 .header{
-    // background: #282c34;
-    // background: radial-gradient(circle, darken(dodgerblue, 10%), #1f4f96, #1b2949, #000);
     background: $my-orange;
-    // background: rgba(0, 0, 0, 0.6);
-    // background : #5f5f5f;
-    padding: 0 $m-size;
     box-shadow: 0px 0.5px ;
     -moz-box-shadow: 0px 0.5px ;
     -webkit-box-shadow: 0px 0.5px ;
@@ -19,19 +14,26 @@
 .header__link{
     color: white;
     text-decoration: none;
-    p {
-        margin: 0;
-        font-size: $font-size-xlarge;
-        font-weight: 600;
-        line-height: 2.5;
-        letter-spacing: 4px;
-    }
+    background-size: auto;
 }
 
 .header__item{
-    padding: 0 $m-size;
+    margin: 0;
+    padding: $m-size * 1.2 0;
+    font-size: $font-size-xlarge;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 4px;
+
+    @media (max-width : $desktop-breakpoint) {
+        font-size: $font-size-large;
+    }
+
+    @media (max-width : 21rem) {
+        font-size: $font-size-xmedium;
+    }
 }
 
 .header__link:hover{
-    background-color: darken($my-orange, 10%)!important;
+    background-color: darken($my-orange, 10%);
 }
