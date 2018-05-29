@@ -22,7 +22,6 @@
     position: relative;
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
     background : fade-out($color: #ff7300, $amount: 0.25);
     justify-content: space-between;
     margin: $l-size * 2 0;
@@ -30,6 +29,13 @@
     box-shadow: 0px 0.5px white,0px -0.5px white ;
     -moz-box-shadow: 0px 0.5px white,0px -0.5px white;
     -webkit-box-shadow: 0px 0.5px white,0px -0.5px white;
+
+    @media (max-width : $desktop-breakpoint) {
+        margin: $m-size 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 }
 
 .box-layout__title{
@@ -37,7 +43,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: $m-size $xl-size $m-size $xl-size;
+    margin: $m-size $xl-size;
+
+    @media (max-width : $desktop-breakpoint) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: $s-size auto;
+    }
     // background-color:coral;
 }
 
@@ -48,6 +61,10 @@
     margin : 0 ;
     // background-color:lightgreen;
     // font-weight: 700;
+    @media (max-width : $desktop-breakpoint) {
+        font-size: 1.4rem ;
+        // line-height: 2;
+    }
 }
 
 .box-layout__heading{
@@ -70,7 +87,7 @@
 .box-layout__button{
     padding: 0 0 0 $s-size;
     background-color: white;
-    color: #e06500;
+    color: $my-orange;
     font-size: 1.8rem;
     font-weight: 700;
     border: none;

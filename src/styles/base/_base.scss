@@ -10,7 +10,8 @@ body {
   line-height: 1.6;
   color: #333333;
   // background: rgba(0, 0, 0, 0.1);
-  // background: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%) ;
+  // background: linear-gradient(to right, #f6f7f8 0%, #f7f8f8 100%) ;
+  background: darken($color: #ffffff, $amount: 2%);
 }
 
 button {

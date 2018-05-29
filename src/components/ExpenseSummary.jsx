@@ -11,14 +11,29 @@ export class ExpenseSummary extends React.Component {
             <div>
                 {this.props.count > 0 && (
                     this.props.count === 1 ? (
-                        <div>
-                            <p>{`Viewing 1 expense totalling ₹ ${myFormat(this.props.total)}`}</p>
-                            <Link to="/create" >Create Expense</Link>
+                        <div className="page-header">
+                            <div className="content-container">
+                                <div className="page-header__content">
+                                    <p className="page-header__title">
+                                        Viewing <span>1</span> expense totalling <span>₹ ${myFormat(this.props.total)}</span>
+                                    </p>
+                                    <Link className="page-header__action" to="/create" >Create Expense</Link>
+                                </div>
+                            </div>
                         </div>
                     ) : (
-                        <div>
-                            <p>{`Viewing ${this.props.count} expenses totalling ₹ ${myFormat(this.props.total)}`}</p>
-                            <Link to="/create" >Create Expense</Link>
+                        <div className="page-header">
+                            <div className="content-container">
+                                <div className="page-header__content">
+                                    <p className="page-header__title">
+                                        Viewing <span>{this.props.count}</span> expenses totalling <span>₹ {myFormat(this.props.total)}</span>
+                                    </p>
+                                    <div className="page-header__action">
+                                        <Link className="buttons" to="/create" >Create Expense</Link>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     )
                 )}
