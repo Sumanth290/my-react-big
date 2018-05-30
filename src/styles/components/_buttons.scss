@@ -21,4 +21,11 @@
     @media (max-width : $desktop-breakpoint) {
         width: 100%;
     }
+    @extend .form_button;
+}
+
+.form_button {
+    @media (max-width : $desktop-breakpoint) {
+        width: 100%;
+    }
 }

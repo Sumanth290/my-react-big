@@ -29,7 +29,6 @@
   "author": "Sumanth Damarla",
   "license": "MIT",
   "dependencies": {
-    "all": "^0.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
@@ -59,7 +58,6 @@
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
-    "uuid": "^3.2.1",
     "webpack": "^4.7.0",
     "webpack-cli": "^2.1.3"
   },

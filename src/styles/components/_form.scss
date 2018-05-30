@@ -4,12 +4,8 @@
     > * {
         margin-bottom: $m-size;
     }
-    button {
-        @media (max-width : $desktop-breakpoint) {
-            width: 100%;
-        }
-    }
 }
+
 
 .form__error{
     margin: 0 0 $m-size 0;
