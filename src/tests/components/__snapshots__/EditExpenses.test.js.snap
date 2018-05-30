@@ -2,25 +2,44 @@
 
 exports[`should render EditExpensePage 1`] = `
 <div>
-  <h2>
-    This is "Edit Expense Page"
-  </h2>
-  <ExpenseForm
-    expense={
-      Object {
-        "amount": 109500,
-        "desc": "rent",
-        "id": "2",
-        "note": "",
-        "timestamp": "1969-12-28T00:00:00.000Z",
-      }
-    }
-    onSubmit={[Function]}
-  />
-  <button
-    onClick={[Function]}
+  <div
+    className="page-header"
   >
-    Remove
-  </button>
+    <div
+      className="content-container"
+    >
+      <div
+        className="page-header__content"
+      >
+        <p
+          className="page-header__title"
+        >
+          Edit Expense
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <ExpenseForm
+      expense={
+        Object {
+          "amount": 109500,
+          "desc": "rent",
+          "id": "2",
+          "note": "",
+          "timestamp": "1969-12-28T00:00:00.000Z",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="buttons buttons--remove"
+      onClick={[Function]}
+    >
+      Remove Expense
+    </button>
+  </div>
 </div>
 `;

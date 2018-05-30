@@ -1,15 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render ExpenseForm 1`] = `
-<div>
+<div
+  className="form"
+>
   <input
     autoFocus={true}
+    className="text-input"
     onChange={[Function]}
     placeholder="Description"
     type="text"
     value=""
   />
   <input
+    className="text-input"
     onChange={[Function]}
     placeholder="Amount"
     type="text"
@@ -103,28 +107,36 @@ exports[`Should render ExpenseForm 1`] = `
     withPortal={false}
   />
   <textarea
+    className="text-area"
     onChange={[Function]}
     placeholder="Add a note for your expense (optional)"
     value=""
   />
-  <button
-    onClick={[Function]}
-  >
-    Add Expense
-  </button>
+  <div>
+    <button
+      className="buttons"
+      onClick={[Function]}
+    >
+      Save Expense
+    </button>
+  </div>
 </div>
 `;
 
 exports[`Should render ExpenseForm with expense 1`] = `
-<div>
+<div
+  className="form"
+>
   <input
     autoFocus={true}
+    className="text-input"
     onChange={[Function]}
     placeholder="Description"
     type="text"
     value="rent"
   />
   <input
+    className="text-input"
     onChange={[Function]}
     placeholder="Amount"
     type="text"
@@ -218,28 +230,41 @@ exports[`Should render ExpenseForm with expense 1`] = `
     withPortal={false}
   />
   <textarea
+    className="text-area"
     onChange={[Function]}
     placeholder="Add a note for your expense (optional)"
     value=""
   />
-  <button
-    onClick={[Function]}
-  >
-    Add Expense
-  </button>
+  <div>
+    <button
+      className="buttons"
+      onClick={[Function]}
+    >
+      Save Expense
+    </button>
+  </div>
 </div>
 `;
 
 exports[`Should render error for ExpenseForm 1`] = `
-<div>
+<div
+  className="form"
+>
+  <p
+    className="form__error"
+  >
+    Please provide 'Description' and 'Amount'
+  </p>
   <input
     autoFocus={true}
+    className="text-input"
     onChange={[Function]}
     placeholder="Description"
     type="text"
     value=""
   />
   <input
+    className="text-input"
     onChange={[Function]}
     placeholder="Amount"
     type="text"
@@ -333,17 +358,18 @@ exports[`Should render error for ExpenseForm 1`] = `
     withPortal={false}
   />
   <textarea
+    className="text-area"
     onChange={[Function]}
     placeholder="Add a note for your expense (optional)"
     value=""
   />
-  <button
-    onClick={[Function]}
-  >
-    Add Expense
-  </button>
-  <p>
-    Please provide 'Description' and 'Amount'
-  </p>
+  <div>
+    <button
+      className="buttons"
+      onClick={[Function]}
+    >
+      Save Expense
+    </button>
+  </div>
 </div>
 `;

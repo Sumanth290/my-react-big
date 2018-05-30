@@ -4,13 +4,15 @@ import moment from "moment";
 import myFormat from "../util/amtFormatter";
 
 export const ExpenseListItem =  ({desc,note,amount,timestamp,id}) => (
-    <div>
-        <h3>Description : <Link to={`/edit/${id}`}>{desc}</Link></h3>
-        { note && <p>Note : {note}</p> }
-        {/* <p>Amount : {numeral(amount/100).format("$0,0.00")}</p> */}
-        <p>Amount : ₹ {myFormat(amount/100)}</p>
-        <p>Date : {moment(timestamp).format("MMM DD, Y")}</p>
-    </div>
+    <Link className="list-item" to={`/edit/${id}`}>
+        <div>
+            <h3 className="list-item__title">{desc}</h3>
+            <p className="list-item__sub-title">{moment(timestamp).format("MMM DD, Y")}</p>
+        </div>
+        <div>
+            <h3 className="list-item__data">₹{myFormat(amount/100)}</h3>
+        </div>
+    </Link>
 );
 
 
